@@ -1,0 +1,68 @@
+.header {
+    width: 100%;
+    background: slateblue;
+    padding: 2em 5%;
+
+    @include flex(row, nowrap, space-around, center);
+    &_h1{
+        max-width: 200px;
+        background-color: red;
+    }
+    &_a{}
+    &_img{}
+    &_nav{
+        width: calc(100%- 400px);
+        background: springgreen;
+    }
+    &_ul{
+        @include flex(row, nowrap flex-end, center);
+    }
+    &_li{
+        background: orange;
+        margin: 0 0 0 1em;
+    }
+    &_a{}
+    &_login{
+        padding: .5em 1em;
+        border-radius: .4em;
+        background: orangered;
+    }
+}
+    .select{
+        height: 2em;
+        background-color: orchid;
+        overflow: hidden;
+        border: 1px solid white;
+        border-radius: .3em;
+        position: relative;
+    
+     &::after{
+         content:'▼';
+         height: 100%;
+         position: absolute;
+         top:.05em;
+         right: .4em;
+         @include flex(row, nowrap center, center);
+         color: inherit;
+     } 
+     &::before{
+         content: 'a';
+         height: 100%;
+         position: absolute;
+         top: 0em;
+         left: .4em;
+         @include flex(row, nowrap flex-end, center);
+         color: inherit;
+     }  
+
+        &_span{
+            height: 2em;
+            @include flex(row, nowrap, center, center);
+            padding:.5em 1.6em .5em 1em;
+        }
+        &_ul{}
+        &_li{}
+        &_a{}
+        &_span{}
+        
+    }
